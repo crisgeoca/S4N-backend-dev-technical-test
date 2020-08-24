@@ -1,0 +1,11 @@
+dependencies {
+
+  implementation project(':model')
+  implementation project(':usecase')
+}
+task explodedJar(type: Copy) {
+  with jar
+  into "${buildDir}/exploded"
+}
+version = '0.0.1-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
